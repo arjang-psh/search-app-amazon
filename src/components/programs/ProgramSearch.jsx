@@ -29,7 +29,7 @@ const ProgramSearch = ({filter, setFilter}) => {
       <h2 style={{textAlign:"center", marginBottom:0}}>What are you looking for?</h2>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12}>
-            <TextField label="Search by Team or Program Name" variant="standard" name="search" fullWidth onChange={handleChange} size="small"/>
+            <TextField label="Search by Team or Program Name" variant="standard" value={filter.search} name="search" fullWidth onChange={handleChange} size="small"/>
           </Grid>
           <Grid item xs={12} sm={12} md={12}>
             <Accordion>
@@ -218,7 +218,7 @@ const ProgramSearch = ({filter, setFilter}) => {
                     </FormControl>
                   </Grid>
                   <Grid item xs={12} sm={12} md={1.5}>
-                    <Button onClick={() => {}} variant="outlined" sx={{float:"right"}} color="error" size="large">Clear All</Button>
+                    <Button onClick={() => {setFilter({search:"", level:[], format:[], leaderships:[]})}} variant="outlined" sx={{float:"right"}} color="error" size="large">Clear All</Button>
                   </Grid>
                 </Grid>
               </AccordionDetails>
