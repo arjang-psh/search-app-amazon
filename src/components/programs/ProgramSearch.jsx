@@ -49,7 +49,7 @@ const ProgramSearch = ({filter, setFilter}) => {
                         labelId="demo-multiple-checkbox-label"
                         id="demo-multiple-checkbox"
                         name="level"
-                        input={<OutlinedInput label="Tag"/>}
+                        input={<OutlinedInput label="Level"/>}
                         renderValue={(selected) => selected.join(', ')}
                         onChange={handleChange}
                         value={filter.level}
@@ -100,7 +100,7 @@ const ProgramSearch = ({filter, setFilter}) => {
                         name="format"
                         value={filter.format}
                         onChange={handleChange}
-                        input={<OutlinedInput label="Tag"/>}
+                        input={<OutlinedInput label="Format"/>}
                         renderValue={(selected) => selected.join(', ')}
                       >
                         <MenuItem value={"In person"}>
@@ -145,7 +145,7 @@ const ProgramSearch = ({filter, setFilter}) => {
                         name="leaderships"
                         value={filter.leaderships}
                         onChange={handleChange}
-                        input={<OutlinedInput label="Tag"/>}
+                        input={<OutlinedInput label="Leadership Principles"/>}
                         renderValue={(selected) => selected.join(', ')}
                       >
 
