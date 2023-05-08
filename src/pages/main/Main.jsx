@@ -17,7 +17,7 @@ const Main = () => {
 
     useEffect(()=> {
        let newRows = data
-       console.log(newRows)
+       console.log(filter)
        if (filter.search) {
         
         newRows = newRows.filter((item)=> {
