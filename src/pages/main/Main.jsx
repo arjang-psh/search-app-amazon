@@ -4,7 +4,8 @@ import Header from '../../components/header/Header'
 import ProgramSearch from '../../components/programs/ProgramSearch'
 import ProgramTable from '../../components/programs/ProgramTable'
 import { data } from '../../data';
-import { CommentsDisabledOutlined } from '@mui/icons-material';
+import { TimeToLeaveOutlined } from '@mui/icons-material';
+
 
 
 
@@ -16,11 +17,27 @@ const Main = () => {
 
     useEffect(()=> {
        let newRows = data
+       console.log(newRows)
        if (filter.search) {
-        newRows.filter((item)=> {
-          return item.team.toLowerCase().includes(filter.search.toLowerCase()) || item.program.toLowerCase().includes(filter.search.toLowerCase())})
+        
+        newRows = newRows.filter((item)=> {
+          let newString = `${item.team} ${item.program}`.toLowerCase()
+          return newString.includes(filter.search) 
+        })
+       }
+       if (filter.level.length) {
+          newRows = newRows.filter((item)=> {
+            let sharedItems = item.level.filter(item => filter.level.includes(item))
+            return sharedItems.length  
+          })
+       }
+       if (filter.format) {
+        newRows = newRows.filter((item) =>{
+          return item.format.includes(filter.format)
+        })
        }
        setRows(newRows)
+       console.log(newRows)
     }, [filter])
     
   

@@ -4,8 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import Link from '@mui/material/Link';
 
 
 const Navbar = () => {
@@ -13,12 +12,11 @@ const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static" sx={{ backgroundColor: "#303F9F"}}>
       <Toolbar>
-        
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          ATDM SEARCH APP
+          <Link href="/" sx={{textDecoration: 'none', color:"#FFF"}}>ATDM SEARCH APP</Link>
         </Typography>
-        <Button color="inherit">About</Button>
-        <Button color="inherit">Dashboard</Button>
+        <Button href="about" color="inherit">About</Button>
+        <Button href="dashboard" color="inherit">Dashboard</Button>
       </Toolbar>
     </AppBar>
   </Box>

@@ -6,7 +6,7 @@ import logo from '../../assets/logo.png'
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1, padding: 1, background: "#FFF" }}>
+    <Box sx={{ flexGrow: 1, padding: 1}}>
     <Grid container spacing={2} >
       <Grid item xs={4} sm={4} md={1.2}>
         <img src={logo} alt='logo' style={{ width: "100%", marginTop: 8, marginLeft: 15}}/>
@@ -26,7 +26,7 @@ const Header = () => {
         Find The Rigth Talent Development Program
       </Typography>
       <Typography variant="body2" gutterBottom>
-        Better. Faster. Simpler
+        Better. Faster. Simpler.
       </Typography>
       </Grid>
     </Grid>

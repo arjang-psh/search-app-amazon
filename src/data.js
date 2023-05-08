@@ -77,7 +77,7 @@ export const data = [
     {
      "id": 4,
      "team": "GOLD",
-     "program": "NAvigate",
+     "program": "Navigate",
      "level": ["L4", "L5", "L6"],
      "format": "Online",
      "lunch_date": 2021,

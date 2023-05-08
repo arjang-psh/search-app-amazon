@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -86,8 +86,8 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
 
 const ProgramTable = ({rows}) => {
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(10);
   
     const handleChangePage = (event, newPage) => {
       setPage(newPage);
@@ -100,17 +100,16 @@ const ProgramTable = ({rows}) => {
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
     <TableContainer component={Paper}>
-    <h2 style={{textAlign:"center"}}>What are you looking for?</h2>
     <Table>
       <TableHead  sx={{ 'td, th': { border: 3 } }}>
         <TableRow>
           <StyledTableCell>Team</StyledTableCell>
-          <StyledTableCell align="left">Program</StyledTableCell>
-          <StyledTableCell align="left">Level</StyledTableCell>
-          <StyledTableCell align="left">Lunch Date</StyledTableCell>
-          <StyledTableCell align="left">Format</StyledTableCell>
-          <StyledTableCell align="left" sx={{width:"5px"}}>Leadership principles</StyledTableCell>
-          <StyledTableCell align="left">Link</StyledTableCell>
+          <StyledTableCell align="center">Program</StyledTableCell>
+          <StyledTableCell align="center">Level</StyledTableCell>
+          <StyledTableCell align="center">Lunch Date</StyledTableCell>
+          <StyledTableCell align="center">Format</StyledTableCell>
+          <StyledTableCell align="center" sx={{width:"5px"}}>Leadership principles</StyledTableCell>
+          <StyledTableCell align="center">Link</StyledTableCell>
         </TableRow>
       </TableHead>
       <TableBody>
