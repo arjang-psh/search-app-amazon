@@ -9,7 +9,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
 import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 
+import DetailsModal from '../detailsModal/DetailsModal';
 
 
 const leaderShipCounter = (row) => {
@@ -88,6 +90,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 const ProgramTable = ({rows}) => {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(10);
+    const [open, setOpen] = useState(false);
   
     const handleChangePage = (event, newPage) => {
       setPage(newPage);
@@ -98,30 +101,31 @@ const ProgramTable = ({rows}) => {
       setPage(0);
     };
   return (
+    <>
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} >
+    <DetailsModal open={open}/>
     <Table>
       <TableHead  sx={{ 'td, th': { border: 3 } }}>
-        <TableRow>
+        <TableRow onClick={()=> setOpen(false)}>
           <StyledTableCell>Team</StyledTableCell>
           <StyledTableCell align="center">Program</StyledTableCell>
           <StyledTableCell align="center">Level</StyledTableCell>
-          <StyledTableCell align="center">Lunch Date</StyledTableCell>
+          <StyledTableCell align="center">Launch Date</StyledTableCell>
           <StyledTableCell align="center">Format</StyledTableCell>
           <StyledTableCell align="center" sx={{width:"5px"}}>Leadership principles</StyledTableCell>
           <StyledTableCell align="center">Link</StyledTableCell>
         </TableRow>
       </TableHead>
+      
       <TableBody>
         {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
           <StyledTableRow
             key={row.id}
             // sx={{ 'td, th': { border: 1 } }}
           >
-            <StyledTableCell component="th" scope="row">
-              {row.team}
-            </StyledTableCell>
-            <StyledTableCell align="left">{row.program}</StyledTableCell>
+            <StyledTableCell component="th" scope="row">{row.team}</StyledTableCell>
+            <Button onClick={() => setOpen(true)}><StyledTableCell align="left">{row.program}</StyledTableCell></Button>
             <StyledTableCell align="center">{row.level.join("- ")}</StyledTableCell>
             <StyledTableCell align="center">{row.lunch_date}</StyledTableCell>
             <StyledTableCell align="left">{row.format}</StyledTableCell>
@@ -131,6 +135,7 @@ const ProgramTable = ({rows}) => {
             </StyledTableCell>
           </StyledTableRow>
         ))}
+        
       </TableBody>
     </Table>
   </TableContainer>
@@ -144,6 +149,8 @@ const ProgramTable = ({rows}) => {
   onRowsPerPageChange={handleChangeRowsPerPage}
 />
 </Paper>
+
+</>
   )
 }
 

@@ -18,6 +18,7 @@ import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 
 
+
 const ProgramSearch = ({filter, setFilter}) => {
   const handleChange = (e) => {
     setFilter({...filter, [e.target.name]: e.target.value})
@@ -38,7 +39,7 @@ const ProgramSearch = ({filter, setFilter}) => {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography>Advanced Saerch</Typography>
+                <Typography>Advanced Search</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={1.5}>
