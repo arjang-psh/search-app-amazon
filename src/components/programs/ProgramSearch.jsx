@@ -25,7 +25,7 @@ const ProgramSearch = ({filter, setFilter}) => {
   }
   return (
     <Card>
-      <CardContent sx={{paddingLeft: 12, paddingRight: 12, backgroundColor: "#BDBDBD"}}>
+      <CardContent sx={{paddingLeft: 12, paddingRight: 12, backgroundColor: "#BDD7EE"}}>
         <h2 style={{textAlign: "center", marginBottom: 0}}>What are you looking for?</h2>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={12}>

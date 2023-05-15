@@ -12,7 +12,23 @@ import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
 import DetailsModal from '../detailsModal/DetailsModal';
+import { leaderships } from '../../leaderships';
 
+
+
+// const leaderShipCounter = (row) => {
+  
+//   let newList = []
+//    leaderships.forEach((leadership)=> {
+//     if (row[leadership]) {
+//       newList.push(leadership)
+//     } 
+    
+//   }
+  
+//   )
+//   return newList.join(", ")
+// }
 
 const leaderShipCounter = (row) => {
     let count= 0
@@ -69,7 +85,7 @@ const leaderShipCounter = (row) => {
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
+      // backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -104,16 +120,16 @@ const ProgramTable = ({rows}) => {
     <>
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
     <TableContainer component={Paper} >
-    <DetailsModal open={open}/>
+    <DetailsModal open={open} setOpen={setOpen}/>
     <Table>
-      <TableHead  sx={{ 'td, th': { border: 3 } }}>
+      <TableHead  sx={{ 'td, th': { border:1 }, backgroundColor: "#5B9BD5" }}>
         <TableRow onClick={()=> setOpen(false)}>
           <StyledTableCell>Team</StyledTableCell>
           <StyledTableCell align="center">Program</StyledTableCell>
           <StyledTableCell align="center">Level</StyledTableCell>
           <StyledTableCell align="center">Launch Date</StyledTableCell>
           <StyledTableCell align="center">Format</StyledTableCell>
-          <StyledTableCell align="center" sx={{width:"5px"}}>Leadership principles</StyledTableCell>
+          <StyledTableCell align="center">Leadership principles</StyledTableCell>
           <StyledTableCell align="center">Link</StyledTableCell>
         </TableRow>
       </TableHead>
@@ -125,7 +141,7 @@ const ProgramTable = ({rows}) => {
             // sx={{ 'td, th': { border: 1 } }}
           >
             <StyledTableCell component="th" scope="row">{row.team}</StyledTableCell>
-            <Button onClick={() => setOpen(true)}><StyledTableCell align="left">{row.program}</StyledTableCell></Button>
+            <StyledTableCell align="left">{row.program}</StyledTableCell>
             <StyledTableCell align="center">{row.level.join("- ")}</StyledTableCell>
             <StyledTableCell align="center">{row.lunch_date}</StyledTableCell>
             <StyledTableCell align="left">{row.format}</StyledTableCell>

@@ -55,7 +55,7 @@ const Main = () => {
       'Strive to be Earths Best Employer',
       'Success and Scale Bring Broad Responsibility',
     ]
-    leaderships.map(leadership => {
+    leaderships.forEach((leadership) => {
       if (filter.leaderships.includes(leadership)) {
         newRows = newRows.filter(row => row[leadership])
       }

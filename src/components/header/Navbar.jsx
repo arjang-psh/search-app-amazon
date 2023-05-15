@@ -11,7 +11,7 @@ import Link from '@mui/material/Link';
 const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static" sx={{ backgroundColor: "#303F9F"}}>
+    <AppBar position="static" sx={{ backgroundColor: "#373C3F"}}>
       <Toolbar>
         <Typography variant="h" component="div" sx={{ flexGrow: 1 }}>
           <Link href="/" sx={{textDecoration: 'none', color:"#FFF"}}></Link>
