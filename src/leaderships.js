@@ -1,0 +1,18 @@
+export const leaderships = [
+    'Customer Obsession',
+    'Ownership',
+    'Invent & Simplify',
+    'Are Right, A Lot',
+    'Learn & be Curious',
+    'Think Big',
+    'Hire and Develop the best',
+    'Insist on the highest standards',
+    'Bias for Action',
+    'Frugality',
+    'Earn Trust',
+    'Dive Deep',
+    'Have Backbone; Disagree and Commit',
+    'Deliver Results',
+    'Strive to be Earths Best Employer',
+    'Success and Scale Bring Broad Responsibility',
+  ]

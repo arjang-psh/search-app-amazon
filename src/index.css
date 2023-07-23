@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "AmazonEmber";
+  src: local("AmazonEmberRg"),
+   url("./fonts/AmazonEmber_Rg.ttf") format("truetype");
+}

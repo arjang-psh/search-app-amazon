@@ -1,0 +1,50 @@
+{
+    "name": "@amzn/cop-marketplace",
+    "version": "1.0.0",
+    "dependencies": {
+        "@emotion/react": "^11.10.8",
+        "@emotion/styled": "^11.10.8",
+        "@mui/icons-material": "^5.11.16",
+        "@mui/material": "^5.12.3",
+        "@amzn/harmony-react-tutorials": "^2.0.3",
+        "react-router-dom": "^6.11.1",
+        "ajv": "^6.12.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "react-scripts": "^5.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test-react": "react-scripts test --env=jsdom",
+        "test": "echo no test",
+        "eject": "react-scripts eject",
+        "build-harmony-app": "build-harmony --templateName react",
+        "publish": "build-harmony --templateName react --brazil-build"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "harmony": {
+        "appName": "cop-marketplace",
+        "jobCategories": [
+            "developer"
+        ],
+        "headers": [
+            {
+                "name": "Content-Security-Policy",
+                "value": "DEFAULT"
+            }
+        ]
+    },
+    "harmony-version": "1.7.109",
+    "homepage": "/cop-marketplace/",
+    "displayName": "cop-marketplace",
+    "description": "a search app for CoP programs",
+    "bindleId": "amzn1.bindle.resource.ahmreyl5pigk25adxkma"
+}
